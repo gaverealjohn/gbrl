@@ -1,0 +1,322 @@
+@import url('../assets/fonts/Chillax_Complete/Fonts/WEB/css/chillax.css');
+@import url('../assets/fonts/WEB/css/clash-grotesk.css');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+@font-face {
+  font-family: 'nodesignfoundry';
+  src: url('../assets/fonts/nodesignfoundry/no-design-foundry-pan.ttf');
+}
+
+:root {
+  --light: #f4f3ee;
+  --dark: #12130f;
+  --secondary-dark: #222222;
+  --accent: #ef2917;
+  --secondary: #de7c5a;
+  --tertiary: #570000;
+}
+
+body {
+  font-family: ClashGrotesk-Regular, sans-serif;
+  font-weight: 400;
+  color: var(--light);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* overflow: hidden; */
+  /* background-color: black; */
+  /* from: https://codepen.io/edmundojr/pen/xOYJGw */
+  --dot-bg: var(--dark);
+  --dot-color: var(--light);
+  --dot-size: 1px;
+  --dot-space: 24px;
+  background: linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+              linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 100%) center / var(--dot-space) var(--dot-space),
+              var(--dot-color);
+}
+
+nav {
+  font-family: Chillax-Medium, sans-serif;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  align-self: flex-end;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  list-style: none;
+  margin: 0 16px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--light);
+}
+
+#color-toggle {
+  color: var(--light);
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+}
+
+#color-toggle:hover {
+  cursor: pointer;
+}
+
+/* main container */
+main {
+  color: var(--light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#hero {
+  display: flex;
+  padding: 0 15%;
+  height: 98vh;
+}
+
+#hero .bio  {
+  padding: 20% 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+#hero .bio * {
+  margin: 0;
+  padding: 0;
+}
+
+.greeting {
+  font-family: Chillax-Semibold;
+  font-size: 2rem;
+}
+
+.name-job-animation {
+  height: 8rem;
+  overflow: hidden;
+}
+
+/* from: https://codepen.io/pgalor/pen/OeRWJQ */
+.glitch {
+  animation: glitch 1s linear infinite;
+  font-family: nodesignfoundry;
+  font-size: 5.5rem;
+  color: var(--accent);
+}
+
+@keyframes glitch{
+  2%, 64% {
+      transform: translate(2px,0) skew(0deg);
+  }
+  4%, 60% {
+      transform: translate(-2px,0) skew(0deg);
+  }
+  62% {
+      transform: translate(0,0) skew(5deg); 
+  }
+}
+
+.first-name:before,
+.first-name:after {
+  content: attr(title);
+  position: absolute;
+  left: 22%;
+}
+
+.job:before,
+.job:after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+.glitch:before{
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+  2%, 64% {
+    transform: translate(2px,-2px);
+  }
+  4%, 60% {
+    transform: translate(-2px,2px);
+  }
+  62% {
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}
+
+.glitch:after{
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+  2%, 64% {
+    transform: translate(-2px,0);
+  }
+  4%, 60% {
+    transform: translate(-2px,0);
+  }
+  62% {
+    transform: translate(-22px,5px) skew(21deg); 
+  }
+}
+
+/* from: https://codepen.io/carloscdev/pen/mdBLmwP */
+.name-job-animation div:first-child {
+    animation: text-animation 6s infinite;
+}
+
+@keyframes text-animation {
+  0% { margin-top: 0; }
+  10% { margin-top: 0;}
+  20% { margin-top: 0 }
+  30% { color: transparent; }
+  40% { margin-top: -6.8rem; }
+  50% { margin-top: -6.8rem; }
+  55% { margin-top: -6.8rem; }
+  60% { color: transparent; }
+  65% { margin-top: 0; }
+  70% { margin-top: 0; }
+  80% { margin-top: 0; }
+  90% { margin-top: 0; }
+  100% { margin-top: 0; }
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  padding-top: 2%;
+}
+
+.section-header {
+  font-family: Chillax-Semibold, sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1cap;
+  color: var(--accent);
+  margin-left: 70px;
+  width: 60%;
+}
+
+.section-div {
+  margin-left: 70px;
+  width: 60%;
+}
+
+.work-experience {
+  margin-left: 48px;
+  margin-bottom: 48px;
+  border-bottom: 2px dashed var(--tertiary);
+}
+
+.company-name {
+  font-family: Chillax-Regular, sans-serif;
+  font-style: italic;
+}
+
+.company span:not(.company-name) {
+  font-style: normal;
+}
+
+.work-description:first-child .work-description-title {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.1cap;
+  margin-bottom: 0;
+}
+
+.work-description-title {
+  font-weight: bold;
+  letter-spacing: 0.1cap;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--secondary);
+}
+
+.work-description:first-child .work-experience-length {
+  font-size: 1.25rem;
+  margin-top: 0;
+}
+
+.work-experience-length {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.work-description:first-child .work-experience-skills {
+  margin-bottom: 20px;
+}
+
+.work-experience-skills {
+  margin-bottom: 10px;
+}
+
+#projects-div {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+}
+
+.project-box {
+  border-radius: 10px;
+  background-color: var(--secondary);
+}
+
+.project-showcase img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.project-footer {
+  padding: 5%;
+}
+
+#footer {
+  width: fit-content;
+  height: 32px;
+  align-self: flex-end;
+  position: fixed;
+  bottom: 0;
+  padding-inline: 15px;
+}
+
+.socials a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-inline: 4px;
+}
+
+#arrow-back-up {
+  color: var(--light);
+  text-decoration: none;
+  font-size: 3rem;
+  position: fixed;
+  bottom: 5%;
+  align-self: flex-end;
+  padding-inline: 30px;
+}

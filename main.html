@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBRL | Software Dev</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="scripts/main.js"></script>
+</head>
+<body>
+    <nav>
+        <!-- <ul class="logo">
+            <li><a href="">GBRL</a></li>
+        </ul> -->
+        <ul class="nav-links">
+            <li class="nav-link experience-link"><a href="#experience">XP</a></li>
+            <li class="nav-link projects-link"><a href="#projects">PROJS</a></li>
+            <!-- <li class="nav-link contact-link"><a href="#footer">HEY</a></li> -->
+            <li class="nav-link color-link"><button id="color-toggle" onclick="toggleDarkMode()"><i id="color-toggle-icon" class="fa fa-sun-o"></i></button></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="hero">
+            <!-- <div class="portrait">
+                <img src="assets/portraits/DSC_0097-45-removebg-preview.png" alt="">
+            </div> -->
+            <div class="bio">
+                <p class="greeting">Hello, I'm</p>
+                <section class="name-job-animation">
+                    <!-- <span class="greeting">My name is</span> -->
+                    <div class="first-name glitch" title="GABRIEL">GABRIEL</div>
+                    <div class="job glitch" title="a SOFTWARE DEV">a SOFTWARE DEV</div>
+                </section>
+                <p class="short-intro">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Sed et risus faucibus, imperdiet nibh eget, semper nibh. 
+                    Suspendisse sapien tellus, lacinia nec tellus ac, ornare luctus libero. 
+                    Donec tristique purus a faucibus scelerisque. 
+                    Fusce justo tellus, rhoncus nec efficitur quis, suscipit id odio. Duis sed neque dui. Duis interdum turpis.
+                </p>
+            </div>
+        </section>
+        <section id="experience" class="section-container">
+            <h1 id="experience-header" class="section-header">Experience</h1>
+            <div id="experience-div" class="section-div">
+                <div class="work-experience">
+                    <details open>
+                        <summary class="company">
+                            <span class="company-name">Alliance Software, Inc.</span>
+                            <span class="work-type">&nbsp;&nbsp;&nbsp;(Full-time)</span>
+                            <!-- <span class="length">2 years 7 months</span> -->
+                        </summary>
+                        <ul class="work-description-list">
+                            <li class="work-description">
+                                <p class="work-description-title">Software Developer - Associate Technical Specialist I</p>
+                                <p class="work-experience-length">AUG 2022 - Present &nbsp;&nbsp;&nbsp;&#183;&nbsp;&nbsp;&nbsp; 2 years 7 months</p>
+                                <ul class="work-experience-skills">
+                                    <li class="work-experience-skill">Microsoft Power Platform</li>
+                                    <li class="work-experience-skill">HTML, CSS, JavaScript</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </details>
+                </div>
+                <div class="work-experience">
+                    <details open>
+                        <summary class="company">
+                            <span class="company-name">Gecko Tech, Inc.</span>
+                            <span class="work-type">&nbsp;&nbsp;&nbsp;(Internship)</span>
+                            <!-- <span class="length">2 months</span> -->
+                        </summary>
+                        <ul class="work-description-list">
+                            <li class="work-description">
+                                <p class="work-description-title">Full-Stack Web Developer</p>
+                                <p class="work-experience-length">JUN 2022 - JUL 2022 &nbsp;&nbsp;&nbsp;&#183;&nbsp;&nbsp;&nbsp; 2 months</p>
+                                <ul class="work-experience-skills">
+                                    <li class="work-experience-skill">HTML, CSS, JavaScript, JQuery</li>
+                                    <li class="work-experience-skill">PHP, MySQL</li>
+                                    <li class="work-experience-skill">qCGI</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </details>
+                </div>
+                <div class="work-experience">
+                    <details open>
+                        <summary class="company">
+                            <span class="company-name">WLC Life Sales and Support</span>
+                            <span class="work-type">&nbsp;&nbsp;&nbsp;(Full-time)</span>
+                            <!-- <span class="length">8 months</span> -->
+                        </summary>
+                        <ul class="work-description-list">
+                            <li class="work-description">
+                                <p class="work-description-title">Full-Stack Web Developer</p>
+                                <p class="work-experience-length">JAN 2018 - AUG 2018 &nbsp;&nbsp;&nbsp;&#183;&nbsp;&nbsp;&nbsp; 8 months</p>
+                                <ul class="work-experience-skills">
+                                    <li class="work-experience-skill">HTML, CSS, JavaScript</li>
+                                    <li class="work-experience-skill">BootStrap, JQuery</li>
+                                    <li class="work-experience-skill">PHP, MySQL</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="section-container">
+            <h1 id="projects-header" class="section-header">Projects</h1>
+            <div id="projects-div" class="section-div">
+                <div class="project">
+                    <div class="project-box">
+                        <div class="project-showcase">
+                            <img src="assets/portraits/-the4zs.jpg" alt="self-portrait">
+                        </div>
+                        <div class="project-footer">
+                            <h3 class="project-name">Portpolio Website</h3>
+                            <p class="project-desc">Website to showcase and projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-box">
+                        <div class="project-showcase">
+                            <img src="assets/portraits/-the4zs.jpg" alt="self-portrait">
+                        </div>
+                        <div class="project-footer">
+                            <h3 class="project-name">Portpolio Website</h3>
+                            <p class="project-desc">Website to showcase and projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-box">
+                        <div class="project-showcase">
+                            <img src="assets/portraits/-the4zs.jpg" alt="self-portrait">
+                        </div>
+                        <div class="project-footer">
+                            <h3 class="project-name">Portpolio Website</h3>
+                            <p class="project-desc">Website to showcase and projects</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="footer">
+            <div class="socials">
+                <a href="https://github.com/gaverealjohn/" target="_blank">
+                    <i class="fa fa-github-alt" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/gabriel-john-manzanares-8a4a401a4" target="_blank">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://instagram.com/gbrlig/" target="_blank">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+        <a href="#hero" id="arrow-back-up">
+            <i class="fa fa-angle-double-up"></i>
+        </a>
+    </main>
+</body>
+</html>
