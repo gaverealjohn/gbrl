@@ -15,32 +15,34 @@
             <li><a href="">GBRL</a></li>
         </ul> -->
         <ul class="nav-links">
-            <li class="nav-link experience-link"><a href="#experience">XP</a></li>
-            <li class="nav-link projects-link"><a href="#projects">PROJS</a></li>
-            <!-- <li class="nav-link contact-link"><a href="#footer">HEY</a></li> -->
-            <li class="nav-link color-link"><button id="color-toggle" onclick="toggleDarkMode()"><i id="color-toggle-icon" class="fa fa-sun-o"></i></button></li>
+            <!-- <li class="nav-link experience-link"><a href="#experience">XP</a></li>
+            <li class="nav-link projects-link"><a href="#projects">PROJS</a></li> -->
+            <li class="nav-link color-link">
+                <input type="checkbox" name="darkmode-toggler" id="darkmode-toggler" />
+                <label for="darkmode-toggler">
+                    <i id="color-toggle-icon" class="fa fa-sun-o"></i>
+                </label>
+            </li>
         </ul>
     </nav>
     <main>
-        <section id="hero">
+        <section id="hero" class="section-container">
             <!-- <div class="portrait">
                 <img src="assets/portraits/DSC_0097-45-removebg-preview.png" alt="">
             </div> -->
-            <div class="bio">
-                <p class="greeting">Hello, I'm</p>
+            <div class="hero-div">
+                <p class="greeting">HELLO, I AM</p>
                 <section class="name-job-animation">
                     <!-- <span class="greeting">My name is</span> -->
                     <div class="first-name glitch" title="GABRIEL">GABRIEL</div>
                     <div class="job glitch" title="a SOFTWARE DEV">a SOFTWARE DEV</div>
                 </section>
-                <p class="short-intro">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Sed et risus faucibus, imperdiet nibh eget, semper nibh. 
-                    Suspendisse sapien tellus, lacinia nec tellus ac, ornare luctus libero. 
-                    Donec tristique purus a faucibus scelerisque. 
-                    Fusce justo tellus, rhoncus nec efficitur quis, suscipit id odio. Duis sed neque dui. Duis interdum turpis.
-                </p>
+                <p class="short-intro">Designer. Developer. Data Analyzer.</p>
             </div>
+            <a href="#experience">
+                <i class="fa fa-angle-double-down"></i>
+                <p>Look What I Did</p>
+            </a>
         </section>
         <section id="experience" class="section-container">
             <h1 id="experience-header" class="section-header">Experience</h1>
@@ -109,37 +111,34 @@
         <section id="projects" class="section-container">
             <h1 id="projects-header" class="section-header">Projects</h1>
             <div id="projects-div" class="section-div">
-                <div class="project">
-                    <div class="project-box">
-                        <div class="project-showcase">
-                            <img src="assets/portraits/-the4zs.jpg" alt="self-portrait">
-                        </div>
-                        <div class="project-footer">
-                            <h3 class="project-name">Portpolio Website</h3>
-                            <p class="project-desc">Website to showcase and projects</p>
-                        </div>
+                <div class="project-box">
+                    <div class="project-showcase" style="background: url('assets/portraits/-the4zs.jpg') center / cover no-repeat">
+                        <h3 class="project-name">Portpolio Website</h3>
+                        <p class="project-desc">Website to showcase and projects</p>
                     </div>
                 </div>
-                <div class="project">
-                    <div class="project-box">
-                        <div class="project-showcase">
-                            <img src="assets/portraits/-the4zs.jpg" alt="self-portrait">
-                        </div>
-                        <div class="project-footer">
-                            <h3 class="project-name">Portpolio Website</h3>
-                            <p class="project-desc">Website to showcase and projects</p>
-                        </div>
+                <div class="project-box">
+                    <div class="project-showcase" style="background: url('assets/portraits/IMG20220729130222.jpg') center / cover no-repeat">
+                        <h3 class="project-name">Portpolio Website</h3>
+                        <p class="project-desc">Website to showcase and projects</p>
                     </div>
                 </div>
-                <div class="project">
-                    <div class="project-box">
-                        <div class="project-showcase">
-                            <img src="assets/portraits/-the4zs.jpg" alt="self-portrait">
-                        </div>
-                        <div class="project-footer">
-                            <h3 class="project-name">Portpolio Website</h3>
-                            <p class="project-desc">Website to showcase and projects</p>
-                        </div>
+                <div class="project-box">
+                    <div class="project-showcase" style="background: url('assets/portraits/DSC_0100-46.jpg') center / cover no-repeat">
+                        <h3 class="project-name">Portpolio Website</h3>
+                        <p class="project-desc">Website to showcase and projects</p>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <div class="project-showcase" style="background: url('assets/img/pexels-lum3n-44775-406014.jpg') center / cover no-repeat">
+                        <h3 class="project-name">Portpolio Website</h3>
+                        <p class="project-desc">Website to showcase and projects</p>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <div class="project-showcase" style="background: url('assets/portraits/DSC_0097-45.jpg') center / cover no-repeat">
+                        <h3 class="project-name">Portpolio Website</h3>
+                        <p class="project-desc">Website to showcase and projects</p>
                     </div>
                 </div>
             </div>
