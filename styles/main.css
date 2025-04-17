@@ -20,6 +20,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  /* filter: invert(1); */
 }
 
 body {
@@ -99,7 +100,7 @@ main {
 .section-div {
   margin-left: 70px;
   width: 60%;
-  padding: 3% 5% 2%;
+  padding: 3% 5%;
   background: rgba(59, 54, 54, 0.06);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -230,16 +231,17 @@ main {
   letter-spacing: 0.5cap;
 }
 
-#hero a {
+.arrow {
   font-size: 5em;
   text-align: center;
   color: var(--light);
   text-decoration: none;
+  opacity: 0.5;
   letter-spacing: 5px;
   background: transparent;
   border: none;
   transition: 0.5s;
-  animation: floating 10s ease-in-out infinite;
+  animation: floating 5s ease-in-out infinite;
 }
 
 @keyframes floating {
@@ -248,7 +250,7 @@ main {
   }
 
   50% {
-      transform: translateY(-20px);
+      transform: translateY(-30px);
   }
 
   100% {
@@ -256,19 +258,69 @@ main {
   }
 }
 
-#hero a:hover {
+.arrow:hover {
   cursor: pointer;
   color: var(--dark);
-  -webkit-text-stroke: 2px var(--light);
+  -webkit-text-stroke: 1px var(--light);
+  opacity: 1;
 }
 
-#hero a > p {
+.arrow > p {
   font-size: 1rem;
   margin: 0;
 }
 
+#experience-div {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* grid-template-rows: 1fr; */
+}
 
 .work-experience {
+  padding: 1em;
+}
+
+.work-experience:first-child {
+  border-top-left-radius: 16px;
+}
+.work-experience:last-child {
+  border-bottom-left-radius: 16px;
+}
+
+.work-experience:not(.active) {
+  opacity: 0.5;
+  border: 0.5px solid var(--secondary-dark);
+}
+
+.work-experience.active,
+.work-experience:hover {
+  background: rgba(59, 54, 54, 0.1);
+  box-shadow: 8px 4px 10px rgba(10, 10, 10, 0.5) inset;
+  /* backdrop-filter: blur(1.1px); */
+  /* -webkit-backdrop-filter: blur(1.1px); */
+}
+
+.work-experience:hover.work-experience:not(.active) {
+  cursor: pointer;
+}
+
+.work-details {
+  padding: 0 1em;
+  background: rgba(59, 54, 54, 0.1);
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  box-shadow: -8px 4px 10px rgba(10, 10, 10, 0.5) inset;
+}
+
+.work-detail {
+  height: 100%;
+}
+
+.work-detail:not(.active) {
+  display: none;
+}
+
+/* .work-experience {
   margin-left: 48px;
   margin-bottom: 48px;
   border-bottom: 2px dashed var(--secondary-accent);
@@ -314,7 +366,7 @@ main {
 
 .work-experience-skills {
   margin-bottom: 10px;
-}
+} */
 
 #projects-div {
   width: 60%;
@@ -342,13 +394,27 @@ main {
   font-size: 1.5rem;
   color: var(--accent);
   margin-inline: 4px;
+  transition: 0.5s;
+}
+
+.socials a:hover {
+  color: var(--dark);
+  -webkit-text-stroke: 1px var(--accent);
 }
 
 #arrow-back-up {
+  display: none;
   color: var(--light);
   font-size: 3rem;
   position: fixed;
   bottom: 5%;
   align-self: flex-end;
   padding-inline: 30px;
+  transition: 0.5s;
+  animation: floating 10s ease-in-out infinite;
+}
+
+#arrow-back-up:hover {
+  color: var(--dark);
+  -webkit-text-stroke: 1px var(--light);
 }

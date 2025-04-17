@@ -1,3 +1,13 @@
+$(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() == 0) {
+            $('#arrow-back-up').hide();
+        } else {
+            $('#arrow-back-up').show();
+        }
+    });
+})
+
 function toggleDarkMode() {
     
     // document.getElementsByTagName('html')[0].style.filter = 'invert(1)';
