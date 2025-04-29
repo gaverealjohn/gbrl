@@ -36,3 +36,20 @@ function toggleDarkMode() {
         document.querySelector(':root').style.setProperty('--accent', '#ef2917');
     }
 }
+
+const selectWorkXP = (e) => {
+    let workXPs = document.getElementsByClassName('work-experience');
+    let workDetails = document.getElementsByClassName('work-detail');
+    
+    for (let workXP of workXPs) {
+        workXP.classList.remove('active');
+    }
+
+    for (let workDetail of workDetails) {
+        workDetail.classList.remove('active');
+    }
+
+    e.classList.add('active');
+    let workId = e.getAttribute('data-work-id');
+    document.getElementById(workId).classList.add('active');
+}
