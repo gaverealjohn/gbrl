@@ -37,101 +37,213 @@
                     <div class="first-name glitch" title="GABRIEL">GABRIEL</div>
                     <div class="job glitch" title="a SOFTWARE DEV">a SOFTWARE DEV</div>
                 </section>
-                <p class="short-intro">Designer. Developer. Data Analyzer.</p>
+                <p class="short-intro">Designer. <span>Developer.</span> Data Analyst.</p>
             </div>
-            <a href="#experience">
+            <a href="#experience" class="arrow" id="experience-arrow">
                 <i class="fa fa-angle-double-down"></i>
-                <p>Look What I Did</p>
+                <p>My Experience</p>
             </a>
         </section>
         <section id="experience" class="section-container">
-            <h1 id="experience-header" class="section-header">Experience</h1>
             <div id="experience-div" class="section-div">
-                <div class="work-experience">
-                    <details open>
-                        <summary class="company">
-                            <span class="company-name">Alliance Software, Inc.</span>
-                            <span class="work-type">&nbsp;&nbsp;&nbsp;(Full-time)</span>
-                            <!-- <span class="length">2 years 7 months</span> -->
-                        </summary>
-                        <ul class="work-description-list">
-                            <li class="work-description">
-                                <p class="work-description-title">Software Developer - Associate Technical Specialist I</p>
-                                <p class="work-experience-length">AUG 2022 - Present &nbsp;&nbsp;&nbsp;&#183;&nbsp;&nbsp;&nbsp; 2 years 7 months</p>
-                                <ul class="work-experience-skills">
-                                    <li class="work-experience-skill">Microsoft Power Platform</li>
-                                    <li class="work-experience-skill">HTML, CSS, JavaScript</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </details>
+                <h1 id="experience-header" class="section-header">Experience</h1>
+                <div class="work-list">
+                    <div class="work-experience active" data-work-id="work1" onclick="selectWorkXP(this)">
+                        <div class="work-header">
+                            <h3>Software Engineer</h3></div>
+                        <div class="work-subheader">
+                            <p>Alliance Software, Inc.</p>
+                        </div>
+                    </div>
+                    <div class="work-experience" data-work-id="work2" onclick="selectWorkXP(this)">
+                        <div class="work-header">
+                            <h3>Full-Stack Developer</h3></div>
+                        <div class="work-subheader">
+                            <p>GeckoTech, Inc.</p>
+                        </div>
+                    </div>
+                    <div class="work-experience" data-work-id="work3" onclick="selectWorkXP(this)">
+                        <div class="work-header">
+                            <h3>Full-Stack Developer</h3></div>
+                        <div class="work-subheader">
+                            <p>WLC Life Sales and Supports</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="work-experience">
-                    <details open>
-                        <summary class="company">
-                            <span class="company-name">Gecko Tech, Inc.</span>
-                            <span class="work-type">&nbsp;&nbsp;&nbsp;(Internship)</span>
-                            <!-- <span class="length">2 months</span> -->
-                        </summary>
-                        <ul class="work-description-list">
-                            <li class="work-description">
-                                <p class="work-description-title">Full-Stack Web Developer</p>
-                                <p class="work-experience-length">JUN 2022 - JUL 2022 &nbsp;&nbsp;&nbsp;&#183;&nbsp;&nbsp;&nbsp; 2 months</p>
-                                <ul class="work-experience-skills">
-                                    <li class="work-experience-skill">HTML, CSS, JavaScript, JQuery</li>
-                                    <li class="work-experience-skill">PHP, MySQL</li>
-                                    <li class="work-experience-skill">qCGI</li>
+                <div class="work-details">
+                    <div class="work-detail active" id="work1">
+                        <h2 class="work-title">
+                            Software Engineer
+                            <span class="work-type">Full Time</span>
+                        </h2>
+                        <h4 class="company">
+                            Alliance Software, Inc.
+                        </h4>
+                        <p class="duration">
+                            <span class="duration-from">August 2022 - </span>
+                            <span class="duration-end">April 2025</span>
+                            <span class="duration-total">(2 years 8 months)</span>
+                        </p>
+                        <ul class="work-desc-list">
+                            <li class="work-desc">
+                                <p class="desc-title">Software Developer - Associate Technical Specialist 1</p>
+                                <p class="desc-duration">
+                                    <span class="desc-duration-from">January 2024 - </span>
+                                    <span class="desc-duration-end">April 2025</span>
+                                    <span class="desc-duration-total">(1 year 3 months)</span>
+                                </p>
+                                <ul class="work-desc-summ">
+                                    <li class="work-desc-summ-task">
+                                        Designed and developed low-code applications in Microsoft Power Apps that streamline business processes, integrate data management with SharePoint Online, and automate tasks with Microsoft Power Automate.
+                                    </li>
+                                    <li class="work-desc-summ-task">
+                                        Resolved critical issues in business applications used by key departments in a fast-paced and high-demand corporate environment, ensuring seamless operations and minimal downtime.
+                                    </li>
+                                    <li class="work-desc-summ-task">
+                                        Spearheaded the development and implementation of innovative methods for resolving and deploying fixes, enhancing efficiency, and reducing turnaround time.
+                                    </li>
+                                    <li class="work-desc-summ-task">
+                                        Designed and developed custom SharePoint pages with SharePoint Designer.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="work-desc">
+                                <p class="desc-title">Software Developer - Technical Specialist 2</p>
+                                <p class="desc-duration">
+                                    <span class="desc-duration-from">January 2024 - </span>
+                                    <span class="desc-duration-end">April 2025</span>
+                                    <span class="desc-duration-total">(1 year 3 months)</span>
+                                </p>
+                                <ul class="work-desc-summ">
+                                    <li class="work-desc-summ-task">
+                                        Designed and developed low-code applications in Microsoft Power Apps that streamline business processes, integrate data management with SharePoint Online, and automate tasks with Microsoft Power Automate.
+                                    </li>
+                                    <li class="work-desc-summ-task">
+                                        Resolved critical issues in business applications used by key departments in a fast-paced and high-demand corporate environment, ensuring seamless operations and minimal downtime.
+                                    </li>
+                                    <li class="work-desc-summ-task">
+                                        Spearheaded the development and implementation of innovative methods for resolving and deploying fixes, enhancing efficiency, and reducing turnaround time.
+                                    </li>
+                                    <li class="work-desc-summ-task">
+                                        Designed and developed custom SharePoint pages with SharePoint Designer.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="work-desc">
+                                <p class="desc-title">Software Developer - Technical Specialist 1</p>
+                                <p class="desc-duration">
+                                    <span class="desc-duration-from">January 2024 - </span>
+                                    <span class="desc-duration-end">April 2025</span>
+                                    <span class="desc-duration-total">(1 year 3 months)</span>
+                                </p>
+                                <ul class="work-desc-summ">
+                                    <li class="work-desc-summ-task">
+                                        Designed and developed low-code applications in Microsoft Power Apps that streamline business processes, integrate data management with SharePoint Online, and automate tasks with Microsoft Power Automate.
+                                    </li>
+                                    <li class="work-desc-summ-task">
+                                        Resolved critical issues in business applications used by key departments in a fast-paced and high-demand corporate environment, ensuring seamless operations and minimal downtime.
+                                    </li>
+                                    <li class="work-desc-summ-task">
+                                        Spearheaded the development and implementation of innovative methods for resolving and deploying fixes, enhancing efficiency, and reducing turnaround time.
+                                    </li>
+                                    <li class="work-desc-summ-task">
+                                        Designed and developed custom SharePoint pages with SharePoint Designer.
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
-                    </details>
-                </div>
-                <div class="work-experience">
-                    <details open>
-                        <summary class="company">
-                            <span class="company-name">WLC Life Sales and Support</span>
-                            <span class="work-type">&nbsp;&nbsp;&nbsp;(Full-time)</span>
-                            <!-- <span class="length">8 months</span> -->
-                        </summary>
-                        <ul class="work-description-list">
-                            <li class="work-description">
-                                <p class="work-description-title">Full-Stack Web Developer</p>
-                                <p class="work-experience-length">JAN 2018 - AUG 2018 &nbsp;&nbsp;&nbsp;&#183;&nbsp;&nbsp;&nbsp; 8 months</p>
-                                <ul class="work-experience-skills">
-                                    <li class="work-experience-skill">HTML, CSS, JavaScript</li>
-                                    <li class="work-experience-skill">BootStrap, JQuery</li>
-                                    <li class="work-experience-skill">PHP, MySQL</li>
+                    </div>
+                    <div class="work-detail" id="work2">
+                        <h2 class="work-title">
+                            Full-Stack Developer Intern
+                            <span class="work-type">Internship</span>
+                        </h2>
+                        <h4 class="company">
+                            GeckoTech, Inc.
+                            <span class="work-type">Internship</span>
+                        </h4>
+                        <p class="duration">
+                            <span class="duration-from">JUN 2021 - </span>
+                            <span class="duration-end">JUL 2022</span>
+                            <span class="duration-total">(2 months)</span>
+                        </p>
+                        <ul class="work-desc-list">
+                            <li class="work-desc">
+                                <p class="desc-title">Full-Stack Developer - Intern</p>
+                                <p class="desc-duration">
+                                    <span class="desc-duration-from">JUN 2021 - </span>
+                                    <span class="desc-duration-end">JUL 2021</span>
+                                    <span class="desc-duration-total">(2 months)</span>
+                                </p>
+                                <ul class="work-desc-summ">
+                                    <li class="work-desc-summ-task">
+                                        Designed and developed web applications such as a Learning Management System (LMS) using HTML, CSS, and JavaScript; integrated backend features using qCGI, MySQL, jQuery, and PHP.
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
-                    </details>
+                    </div>
+                    <div class="work-detail" id="work3">
+                        <h2 class="work-title">
+                            Full-Stack Developer
+                            <span class="work-type">Full Time</span>
+                        </h2>
+                        <h4 class="company">
+                            WLC Life
+                            <span class="work-type">Full Time</span>
+                        </h4>
+                        <p class="duration">
+                            <span class="duration-from">JAN 2018 - </span>
+                            <span class="duration-end">AUG 2018</span>
+                            <span class="duration-total">(8 months)</span>
+                        </p>
+                        <ul class="work-desc-list">
+                            <li class="work-desc">
+                                <p class="desc-title">Full-Stack Developer</p>
+                                <p class="desc-duration">
+                                    <span class="desc-duration-from">JAN 2018 - </span>
+                                    <span class="desc-duration-end">AUG 2018</span>
+                                    <span class="desc-duration-total">(8 months)</span>
+                                </p>
+                                <ul class="work-desc-summ">
+                                    <li class="work-desc-summ-task">
+                                        Designed and developed a customer relationship management (CRM) using HTML, CSS, and JavaScript, in the front end and PHP and MySQL in the back end.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            <a href="#projects" class="arrow" id="projects-arrow">
+                <i class="fa fa-angle-double-down"></i>
+                <p>View Projects</p>
+            </a>
         </section>
         <section id="projects" class="section-container">
             <h1 id="projects-header" class="section-header">Projects</h1>
             <div id="projects-div" class="section-div">
                 <div class="project-box">
                     <div class="project-showcase" style="background: url('assets/portraits/-the4zs.jpg') center / cover no-repeat">
-                        <h3 class="project-name">Portpolio Website</h3>
+                        <h3 class="project-name">Portfolio Website</h3>
                         <p class="project-desc">Website to showcase and projects</p>
                     </div>
                 </div>
                 <div class="project-box">
                     <div class="project-showcase" style="background: url('assets/portraits/IMG20220729130222.jpg') center / cover no-repeat">
-                        <h3 class="project-name">Portpolio Website</h3>
+                        <h3 class="project-name">Portfolio Website</h3>
                         <p class="project-desc">Website to showcase and projects</p>
                     </div>
                 </div>
                 <div class="project-box">
                     <div class="project-showcase" style="background: url('assets/portraits/DSC_0100-46.jpg') center / cover no-repeat">
-                        <h3 class="project-name">Portpolio Website</h3>
+                        <h3 class="project-name">Portfolio Website</h3>
                         <p class="project-desc">Website to showcase and projects</p>
                     </div>
                 </div>
                 <div class="project-box">
                     <div class="project-showcase" style="background: url('assets/img/pexels-lum3n-44775-406014.jpg') center / cover no-repeat">
-                        <h3 class="project-name">Portpolio Website</h3>
+                        <h3 class="project-name">Portfolio Website</h3>
                         <p class="project-desc">Website to showcase and projects</p>
                     </div>
                 </div>
@@ -142,6 +254,10 @@
                     </div>
                 </div>
             </div>
+            <!-- <a href="#experience" class="arrow">
+                <i class="fa fa-angle-double-up"></i>
+                <p>Look What I Did</p>
+            </a> -->
         </section>
         <section id="footer">
             <div class="socials">
@@ -156,7 +272,7 @@
                 </a>
             </div>
         </section>
-        <a href="#hero" id="arrow-back-up">
+        <a href="#hero" id="arrow-back-up" class="arrow">
             <i class="fa fa-angle-double-up"></i>
         </a>
     </main>

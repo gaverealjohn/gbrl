@@ -1,3 +1,13 @@
+$(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() == 0) {
+            $('#arrow-back-up').hide();
+        } else {
+            $('#arrow-back-up').show();
+        }
+    });
+})
+
 function toggleDarkMode() {
     
     // document.getElementsByTagName('html')[0].style.filter = 'invert(1)';
@@ -25,4 +35,21 @@ function toggleDarkMode() {
         document.querySelector('body').style.setProperty('--dot-color', 'var(--light)');
         document.querySelector(':root').style.setProperty('--accent', '#ef2917');
     }
+}
+
+const selectWorkXP = (e) => {
+    let workXPs = document.getElementsByClassName('work-experience');
+    let workDetails = document.getElementsByClassName('work-detail');
+    
+    for (let workXP of workXPs) {
+        workXP.classList.remove('active');
+    }
+
+    for (let workDetail of workDetails) {
+        workDetail.classList.remove('active');
+    }
+
+    e.classList.add('active');
+    let workId = e.getAttribute('data-work-id');
+    document.getElementById(workId).classList.add('active');
 }
