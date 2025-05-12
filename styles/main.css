@@ -36,7 +36,7 @@ body {
   --dot-bg: var(--dark);
   --dot-color: var(--light);
   --dot-size: 1px;
-  --dot-space: 24px;
+  --dot-space: 48px;
   background: var(--dark);
   background: linear-gradient(
                 90deg, 
@@ -84,12 +84,9 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* height: 100vh; */
   align-items: center;
   justify-self: center;
-  margin: 2% 0;
-  padding-top: 5%;
-  /* overflow-x: auto; */
+  margin-bottom: 2rem;
 }
 
 .section-header {
@@ -99,21 +96,14 @@ main {
   text-transform: uppercase;
   letter-spacing: -1.5px;
   color: var(--secondary);
+  text-shadow: 2px 2px var(--accent);
   margin: 10px 0;
 }
 
 .section-div {
-  /* margin-left: 70px; */
-  display: flex;
-  flex-direction: row;
-  width: 80%;
-  height: 60vh;
+  width: 60%;
   padding: 3% 5%;
-  background: rgba(39, 38, 38, 0.5);
   border-radius: 12px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(1.1px);
-  -webkit-backdrop-filter: blur(1.1px);
 }
 
 #hero {
@@ -123,7 +113,7 @@ main {
 .hero-div  {
   display: flex;
   flex-direction: column;
-  /* padding: 5%; */
+  padding-top: 5%;
   align-items: center;
 }
 
@@ -245,7 +235,6 @@ main {
 }
 
 .arrow {
-  font-size: 4em;
   text-align: center;
   color: var(--light);
   text-decoration: none;
@@ -259,13 +248,21 @@ main {
 }
 
 .arrow#experience-arrow {
+  font-size: 4em;
   animation: floating 5s ease-in-out infinite;
 }
 
 .arrow#projects-arrow {
-  font-size: 2em;
-  margin-top: 1.5%;
+  margin-top: 3%;
   animation: floating 6s ease-in-out infinite;
+}
+
+.arrow#projects-arrow i {
+  font-size: 32px;
+}
+
+.arrow#projects-arrow p {
+  font-size: 16px;
 }
 
 @keyframes floating {
@@ -296,6 +293,7 @@ main {
 
 .work-list {
   grid-area: worklist;
+  height: inherit;
 }
 
 .work-experience {
@@ -328,7 +326,7 @@ main {
 
 .work-details {
   grid-area: workdetails;
-  padding: 1em 3em;
+  padding: 2em 4em;
   background: rgba(59, 54, 54, 0.1);
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
@@ -409,81 +407,43 @@ main {
 }
 
 .work-desc-summ-task {
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   padding-bottom: 1em;
 }
 
-
 #experience-div {
   display: grid;
-  /* grid-template-columns: 1fr 2fr; */
-  /* grid-template-rows: 1fr; */
   grid-template-areas: 
     "sectionheader  ."
     "worklist workdetails";
-  padding-bottom: 5%;
+  height: 70vh;
 }
-
-/* .work-experience {
-  margin-left: 48px;
-  margin-bottom: 40px;
-  border-bottom: 2px dashed var(--secondary-accent);
-}
-
-.company-name {
-  font-family: Chillax-Regular, sans-serif;
-  font-style: italic;
-}
-
-.company span:not(.company-name) {
-  font-style: normal;
-}
-
-.work-description:first-child .work-description-title {
-  font-size: 1.5em;
-  font-weight: bold;
-  letter-spacing: 0.1cap;
-  margin-bottom: 0;
-}
-
-.work-description-title {
-  font-weight: bold;
-  letter-spacing: 0.1cap;
-  margin-top: 0;
-  margin-bottom: 30px;
-  color: var(--accent);
-}
-
-.work-description:first-child .work-experience-length {
-  font-size: 1em;
-  margin-top: 0;
-}
-
-.work-experience-length {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.work-description:first-child .work-experience-skills {
-  margin-bottom: 20px;
-}
-
-.work-experience-skills {
-  margin-bottom: 10px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-} */
 
 #projects-div {
-  width: 60%;
+  height: 85vh
+}
+
+.projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-
+  grid-template-rows: repeat(3, 1fr);
+  gap: 8px;
+  height: 85%;
 }
 
 .project-showcase {
-  margin: 0;
-  height: 12em;
+  width: auto;
+  height: auto;
+}
+
+.project-name {
+  color: var(--accent);
+  text-shadow: 2px 2px var(--secondary);
+  backdrop-filter: invert(100%);
+}
+
+.project-desc {
+  backdrop-filter: opacity(20%);
 }
 
 #footer {
