@@ -9,31 +9,32 @@ $(function () {
 })
 
 function toggleDarkMode() {
-    
-    // document.getElementsByTagName('html')[0].style.filter = 'invert(1)';
-    
-    if(document.getElementById('color-toggle-icon').classList.contains('fa-sun-o')) {
-        let lightBg = '#edecf0';
-        let darkDot = '#12130f';
-        let lightAccent = '#10d6e8';
-        let darkFont = '#12130f';
-        
-        document.getElementById('color-toggle-icon').classList.remove('fa-sun-o');
-        document.getElementById('color-toggle-icon').classList.add('fa-moon-o');
+    let light = '#eeeeee';
+    let dark = '#151515'
+    let dmSecondaryDark = '#222222';
+    let dmAccent = '#F2613F'
+    let dmSecondary = '#FFA559';
+    let dmSecondaryAccent = '#4e1212';
+    let lmSecondaryDark = '#dddddd';
+    let lmAccent = '#0d9ec0';
+    let lmSecondary = '#005aa6';
+    let lmSecondaryAccent = '#b1eded';
 
-        document.querySelector('body').style.setProperty('--dot-bg', lightBg);
-        document.querySelector('body').style.setProperty('--dot-color', darkDot);
-        document.querySelector(':root').style.setProperty('--light', darkFont);
-        document.querySelector(':root').style.setProperty('--accent', lightAccent);
+    if(document.getElementById('colormode-checkbox').checked) {
+        document.querySelector(':root').style.setProperty('--light', dark);
+        document.querySelector(':root').style.setProperty('--dark', light);
+        document.querySelector(':root').style.setProperty('--secondary-dark', lmSecondaryDark);
+        document.querySelector(':root').style.setProperty('--accent', lmAccent);
+        document.querySelector(':root').style.setProperty('--secondary', lmSecondary);
+        document.querySelector(':root').style.setProperty('--secondary-accent', lmSecondaryAccent);
     }
     else {
-        document.getElementById('color-toggle-icon').classList.remove('fa-moon-o');
-        document.getElementById('color-toggle-icon').classList.add('fa-sun-o');
-
-        document.querySelector('body').style.setProperty('--dot-bg', 'var(--dark)');
-        document.querySelector(':root').style.setProperty('--light', '#f4f3ee');
-        document.querySelector('body').style.setProperty('--dot-color', 'var(--light)');
-        document.querySelector(':root').style.setProperty('--accent', '#ef2917');
+        document.querySelector(':root').style.setProperty('--light', light);
+        document.querySelector(':root').style.setProperty('--dark', dark);
+        document.querySelector(':root').style.setProperty('--secondary-dark', dmSecondaryDark);
+        document.querySelector(':root').style.setProperty('--accent', dmAccent);
+        document.querySelector(':root').style.setProperty('--secondary', dmSecondary);
+        document.querySelector(':root').style.setProperty('--secondary-accent', dmSecondaryAccent);
     }
 }
 

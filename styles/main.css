@@ -47,7 +47,6 @@ body {
                 var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 100%
               ) center / var(--dot-space) var(--dot-space),
               var(--dot-color);
- 
 }
 
 nav {
@@ -68,8 +67,44 @@ nav {
   list-style: none;
 }
 
-.nav-link input[type=checkbox] {
+.colormode-toggle {
+  width: 40px;
+  height: 20px;
+  position: relative;
+}
+
+.colormode-toggle input {
   display: none;
+}
+
+.colormode-toggle label {
+  cursor: pointer;
+  background: var(--secondary-accent);
+  position: absolute;
+  inset: 0 0 0 0;
+  border-radius: 20px;
+  display: block;
+  transition: background 0.5s;
+}
+
+.colormode-toggle label::after {
+  height: 20px;
+  width: 20px;
+  background-color: var(--light);
+  content: '';
+  position: absolute;
+  left: 0;
+  border-radius: 50%;
+  z-index: 1;
+  transition: left 0.3s;
+}
+
+.colormode-toggle input:checked ~ label {
+  background: var(--secondary);
+}
+
+.colormode-toggle input:checked ~ label::after {
+  left: calc(100% - 20px);
 }
 
 /* main container */
