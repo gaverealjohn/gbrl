@@ -289,11 +289,11 @@ main {
 
 .arrow#projects-arrow {
   margin-top: 3%;
-  animation: floating 6s ease-in-out infinite;
+  animation: floating 5s ease-in-out infinite;
 }
 
 .arrow#projects-arrow i {
-  font-size: 32px;
+  font-size: 24px;
 }
 
 .arrow#projects-arrow p {
@@ -306,7 +306,7 @@ main {
   }
 
   50% {
-      transform: translateY(-20px);
+      transform: translateY(-16px);
   }
 
   100% {
@@ -455,7 +455,8 @@ main {
 }
 
 #projects-div {
-  height: 85vh
+  height: 85vh;
+  margin-bottom: 1em;
 }
 
 .projects-grid {
@@ -467,17 +468,41 @@ main {
 }
 
 .project-showcase {
+  position: relative;
+  overflow: hidden;
+  text-align: start;
   width: auto;
   height: auto;
   border-radius: 4px;
   background-blend-mode: normal;
 }
 
-.project-showcase:hover {
-  backdrop-filter: blur(5px);
+.project-showcase img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.project-showcase img:hover {
+  cursor: pointer;
+  transition: 1s ease;
+  transform: scale(1.3);
+  transform-origin: 50% 50%;
+  opacity: 50%;
+}
+
+/* .project-showcase:hover {
+  backdrop-filter: blur(5px);
+} */
+
 .project-name {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: var(--accent);
   text-shadow: 2px 2px var(--secondary);
   font-size: 2em;
@@ -487,6 +512,9 @@ main {
 }
 
 .project-desc {
+  position: absolute;
+  top: 50%;
+  left: 0;
   height: 32px;
   overflow: hidden;
   text-overflow: ellipsis;
