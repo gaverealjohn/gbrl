@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GBRL | Software Dev</title>
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="../scripts/main.js"></script>
 </head>
 <body>
     <nav>
@@ -19,9 +19,11 @@
             <li class="nav-link projects-link"><a href="#projects">PROJS</a></li> -->
             <li class="nav-link colormode-toggle">
                 <input type="checkbox" name="colormode-checkbox" id="colormode-checkbox" onchange="toggleDarkMode()" />
+                <i class="fa fa-angle-double-down"></i>
                 <label for="colormode-checkbox">
                     <i id="color-toggle-icon" class=""></i>
                 </label>
+                <i class="fa fa-angle-double-down"></i>
             </li>
         </ul>
     </nav>
@@ -180,23 +182,28 @@
             <div id="projects-div" class="section-div">
                 <h1 id="projects-header" class="section-header">Projects</h1>
                 <div class="projects-grid">
-                        <div class="project-showcase" style="background: var(--secondary-accent) url('assets/portraits/DSC_0072-35-removebg-preview.png') center / cover no-repeat; grid-row: 1 / span 2;">
+                        <div class="project-showcase" style="background: var(--secondary-accent) url('../assets/portraits/DSC_0072-35-removebg-preview.png') center / cover no-repeat; grid-row: 1 / span 2;">
                             <h3 class="project-name">Portfolio</h3>
                             <p class="project-desc">Website to showcase and projects</p>
                         </div>
-                        <div class="project-showcase" style="background: #7077A1 url('assets/img/antoine-beauvillain-zY_NaksFH1k-unsplash-removebg-preview.png') center / cover no-repeat; grid-column: 2 / span 2;">
+                        <!-- <div class="project-showcase" style="background: var(--secondary-accent); grid-row: 1 / span 2;">
+                            <img src="data:image/<%= items[0].img.contentType %>;base64, <%= items[0].img.data.toString('base64') %>" alt="<%= items[0].description %>">
+                            <h3 class="project-name"><%= items[0].name %></h3>
+                            <p class="project-desc"><%= items[0].description %></p>
+                        </div> -->
+                        <div class="project-showcase" style="background: #7077A1 url('../assets/img/antoine-beauvillain-zY_NaksFH1k-unsplash-removebg-preview.png') center / cover no-repeat; grid-column: 2 / span 2;">
                             <h3 class="project-name">Photo Space</h3>
                             <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
-                        <div class="project-showcase" style="background: #AF47D2 url('assets/portraits/DSC_0110-49-removebg-preview.png') center / cover no-repeat;">
+                        <div class="project-showcase" style="background: #AF47D2 url('../assets/portraits/DSC_0110-49-removebg-preview.png') center / cover no-repeat;">
                             <h3 class="project-name">Lakat</h3>
                             <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
-                        <div class="project-showcase" style="background: #B8621B url('assets/img/pexels-lum3n-44775-406014-removebg-preview.png') center / cover no-repeat;">
+                        <div class="project-showcase" style="background: #B8621B url('../assets/img/pexels-lum3n-44775-406014-removebg-preview.png') center / cover no-repeat;">
                             <h3 class="project-name">Marketo</h3>
                             <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
-                        <div class="project-showcase" style="background: #686D76 url('assets/portraits/DSC_0097-45-removebg-preview.png') center / cover no-repeat;">
+                        <div class="project-showcase" style="background: #686D76 url('../assets/portraits/DSC_0097-45-removebg-preview.png') center / cover no-repeat;">
                             <h3 class="project-name">&#60;placeholder&#62;</h3>
                             <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
