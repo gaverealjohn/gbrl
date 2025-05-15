@@ -8,33 +8,49 @@ const Project = require('../models/project');
 
 module.exports = router;
 
+const encode = (url) => {
+    const base64Img = require('base64-img');
+    let data = base64Img.base64Sync(url);
+    return data;
+}
+
 let storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'uploads')
     },
     filename: (req, file, cb) => {
-        cb(null, file.fieldname + '-' + Date.now())
+        req.fileIdentifier = file.originalname + '-' + file.fieldname + '-' + Date.now();
+        cb(null, req.fileIdentifier);
     }
 });
 
 let upload = multer({ storage: storage });
 
-// POST
-// router.post('/post', (req, res) => {
-//     res.send('Post API')
-// });
-router.post('/post', upload.single('img'), async (req, res) => {
+// GET all
+router.get('/', async (req, res) => {
+    try {
+        const data = await Project.find();
+        // res.json(data);
+        res.render('main', { items: data });
+    }
+    catch(error) {
+        res.status(500).json({message: error.message});
+    }
+});
+
+// POST to Projects
+router.post('/projects/post', upload.single('img'), async (req, res) => {
     const data = new Project({
         name: req.body.name,
         description: req.body.description,
         img: {
-            data: fs.readFileSync(path.join('C:/Users/luffy/Documents/dev/web/portfolio/gbrl' + '/uploads/' + req.file.filename)),
+            data: fs.readFileSync(path.join(process.cwd() + '/uploads/' + req.fileIdentifier)),
             contentType: 'image/png'
         }
     });
 
     try {
-        const dataToSave = await data.save();
+        await data.save();
         // res.status(200).json(dataToSave);
         res.redirect('/');
     }
@@ -54,26 +70,8 @@ router.get('/admin', async (req, res) => {
     }
 });
 
-// GET all
-// router.get('/getAll', (req, res) => {
-//     res.send('Get All API')
-// });
-router.get('/', async (req, res) => {
-    try {
-        const data = await Project.find();
-        // res.json(data);
-        res.render('main', { items: data });
-    }
-    catch(error) {
-        res.status(500).json({message: error.message});
-    }
-});
-
 // GET by ID
-// router.get('/getOne/:id', (req, res) => {
-//     res.send('Get by ID API')
-// });
-router.get('/get/:id', async (req, res) => {
+router.get('/projects/get/:id', async (req, res) => {
     try {
         const data = await Project.findById(req.params.id);
         // res.json(data);
@@ -85,26 +83,24 @@ router.get('/get/:id', async (req, res) => {
 });
 
 // UPDATE by ID
-// router.patch('/update/:id', (req, res) => {
-//     res.send('Update by ID API')
-// });
-router.patch('/update/:id', upload.single('image'), async (req, res) => {
+router.patch('/projects/update/:id', upload.single('img'), async (req, res) => {
     try {
-        const id = req.params.id;
-        // const updatedData = req.body;
-        const options = { new: true };
-
-        const updatedData = new Project({
-            name: req.body.name,
-            description: req.body.description,
-            img_url: {
-                data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
+        if (req.fileIdentifier != undefined) {
+            req.body.img = {
+                data: fs.readFileSync(path.join(process.cwd() + '/uploads/' + req.fileIdentifier)),
                 contentType: 'image/png'
             }
-        });
+            fs.unlinkSync(path.join(process.cwd() + '/uploads/' + req.fileIdentifier));
+        }
+
+        const id = req.params.id;
+        const updatedData = req.body;
+        const options = { new: true };
 
         const result = await Project.findByIdAndUpdate(
-            id, updatedData, options
+            id, 
+            updatedData,
+            options
         );
 
         res.send(result);
@@ -115,10 +111,7 @@ router.patch('/update/:id', upload.single('image'), async (req, res) => {
 });
 
 // DELETE by ID
-// router.delete('/delete/:id', (req, res) => {
-//     res.send('Delete by ID API')
-// });
-router.delete('/delete/:id', async (req, res) => {
+router.delete('/projects/delete/:id', async (req, res) => {
     try {
         const id = req.params.id;
         const data = await Project.findByIdAndDelete(id);

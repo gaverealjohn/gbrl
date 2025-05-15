@@ -1,22 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GBRL | Software Dev</title>
-    <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="../scripts/main.js"></script>
+    <%- include('partials/header.ejs'); %>
 </head>
 <body>
     <nav>
-        <!-- <ul class="logo">
-            <li><a href="">GBRL</a></li>
-        </ul> -->
         <ul class="nav-links">
-            <!-- <li class="nav-link experience-link"><a href="#experience">XP</a></li>
-            <li class="nav-link projects-link"><a href="#projects">PROJS</a></li> -->
             <li class="nav-link colormode-toggle">
                 <input type="checkbox" name="colormode-checkbox" id="colormode-checkbox" onchange="toggleDarkMode()" />
                 <i class="fa fa-angle-double-down"></i>
@@ -29,149 +18,12 @@
     </nav>
     <main>
         <section id="hero" class="section-container">
-            <!-- <div class="portrait">
-                <img src="assets/portraits/DSC_0097-45-removebg-preview.png" alt="">
-            </div> -->
-            <div class="hero-div">
-                <p class="greeting">HELLO, I AM</p>
-                <section class="name-job-animation">
-                    <!-- <span class="greeting">My name is</span> -->
-                    <div class="first-name glitch" title="GABRIEL">GABRIEL</div>
-                    <div class="job glitch" title="a SOFTWARE DEV">a SOFTWARE DEV</div>
-                </section>
-                <p class="short-intro">Designer. <span>Developer.</span> Data Analyst.</p>
-            </div>
-            <a href="#experience" class="arrow" id="experience-arrow">
-                <i class="fa fa-angle-double-down"></i>
-                <p></p>
-            </a>
+            <%- include('partials/hero.ejs'); %>
         </section>
         <section id="experience" class="section-container">
             <div id="experience-div" class="section-div">
                 <h1 id="experience-header" class="section-header">Experience</h1>
-                <div class="work-list">
-                    <div class="work-experience active" data-work-id="work1" onclick="selectWorkXP(this)">
-                        <div class="work-header">
-                            <h3>Software Engineer</h3></div>
-                        <div class="work-subheader">
-                            <p>Alliance Software, Inc.</p>
-                        </div>
-                    </div>
-                    <div class="work-experience" data-work-id="work2" onclick="selectWorkXP(this)">
-                        <div class="work-header">
-                            <h3>Full-Stack Developer</h3></div>
-                        <div class="work-subheader">
-                            <p>GeckoTech, Inc.</p>
-                        </div>
-                    </div>
-                    <div class="work-experience" data-work-id="work3" onclick="selectWorkXP(this)">
-                        <div class="work-header">
-                            <h3>Full-Stack Developer</h3></div>
-                        <div class="work-subheader">
-                            <p>WLC Life Sales and Supports</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-details">
-                    <div class="work-detail active" id="work1">
-                        <h2 class="work-title">
-                            Software Engineer
-                            <span class="work-type">Full Time</span>
-                        </h2>
-                        <h4 class="company">
-                            Alliance Software, Inc.
-                        </h4>
-                        <p class="duration">
-                            <span class="duration-from">August 2022 - </span>
-                            <span class="duration-end">April 2025</span>
-                            <span class="duration-total">(2 years 8 months)</span>
-                        </p>
-                        <ul class="work-desc-list">
-                            <li class="work-desc">
-                                <p class="desc-title">Software Developer - Associate Technical Specialist 1</p>
-                                <p class="desc-duration">
-                                    <span class="desc-duration-from">January 2024 - </span>
-                                    <span class="desc-duration-end">April 2025</span>
-                                    <span class="desc-duration-total">(1 year 3 months)</span>
-                                </p>
-                                <ul class="work-desc-summ">
-                                    <li class="work-desc-summ-task">
-                                        Designed and developed low-code applications in Microsoft Power Apps that streamline business processes, integrate data management with SharePoint Online, and automate tasks with Microsoft Power Automate.
-                                    </li>
-                                    <li class="work-desc-summ-task">
-                                        Resolved critical issues in business applications used by key departments in a fast-paced and high-demand corporate environment, ensuring seamless operations and minimal downtime.
-                                    </li>
-                                    <li class="work-desc-summ-task">
-                                        Spearheaded the development and implementation of innovative methods for resolving and deploying fixes, enhancing efficiency, and reducing turnaround time.
-                                    </li>
-                                    <li class="work-desc-summ-task">
-                                        Designed and developed custom SharePoint pages with SharePoint Designer.
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="work-detail" id="work2">
-                        <h2 class="work-title">
-                            Full-Stack Developer Intern
-                            <span class="work-type">Internship</span>
-                        </h2>
-                        <h4 class="company">
-                            GeckoTech, Inc.
-                            <span class="work-type">Internship</span>
-                        </h4>
-                        <p class="duration">
-                            <span class="duration-from">JUN 2021 - </span>
-                            <span class="duration-end">JUL 2022</span>
-                            <span class="duration-total">(2 months)</span>
-                        </p>
-                        <ul class="work-desc-list">
-                            <li class="work-desc">
-                                <p class="desc-title">Full-Stack Developer - Intern</p>
-                                <p class="desc-duration">
-                                    <span class="desc-duration-from">JUN 2021 - </span>
-                                    <span class="desc-duration-end">JUL 2021</span>
-                                    <span class="desc-duration-total">(2 months)</span>
-                                </p>
-                                <ul class="work-desc-summ">
-                                    <li class="work-desc-summ-task">
-                                        Designed and developed web applications such as a Learning Management System (LMS) using HTML, CSS, and JavaScript; integrated backend features using qCGI, MySQL, jQuery, and PHP.
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="work-detail" id="work3">
-                        <h2 class="work-title">
-                            Full-Stack Developer
-                            <span class="work-type">Full Time</span>
-                        </h2>
-                        <h4 class="company">
-                            WLC Life
-                            <span class="work-type">Full Time</span>
-                        </h4>
-                        <p class="duration">
-                            <span class="duration-from">JAN 2018 - </span>
-                            <span class="duration-end">AUG 2018</span>
-                            <span class="duration-total">(8 months)</span>
-                        </p>
-                        <ul class="work-desc-list">
-                            <li class="work-desc">
-                                <p class="desc-title">Full-Stack Developer</p>
-                                <p class="desc-duration">
-                                    <span class="desc-duration-from">JAN 2018 - </span>
-                                    <span class="desc-duration-end">AUG 2018</span>
-                                    <span class="desc-duration-total">(8 months)</span>
-                                </p>
-                                <ul class="work-desc-summ">
-                                    <li class="work-desc-summ-task">
-                                        Designed and developed a customer relationship management (CRM) using HTML, CSS, and JavaScript, in the front end and PHP and MySQL in the back end.
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <%- include('experiences.ejs'); %>
             </div>
             <a href="#projects" class="arrow" id="projects-arrow">
                 <i class="fa fa-angle-double-down"></i>
@@ -181,56 +33,11 @@
         <section id="projects" class="section-container">
             <div id="projects-div" class="section-div">
                 <h1 id="projects-header" class="section-header">Projects</h1>
-                <div class="projects-grid">
-                        <div class="project-showcase" style="background: var(--secondary-accent); grid-row: 1 / span 2;">
-                            <img src="../assets/portraits/DSC_0072-35-removebg-preview.png" alt="personal portfolio image" />
-                            <h3 class="project-name">Portfolio</h3>
-                            <p class="project-desc">Website to showcase and projects</p>
-                        </div>
-                        <!-- <div class="project-showcase" style="background: var(--secondary-accent); grid-row: 1 / span 2;">
-                            <img src="data:image/<%= items[0].img.contentType %>;base64, <%= items[0].img.data.toString('base64') %>" alt="<%= items[0].description %>">
-                            <h3 class="project-name"><%= items[0].name %></h3>
-                            <p class="project-desc"><%= items[0].description %></p>
-                        </div> -->
-                        <div class="project-showcase" style="background: #7077A1; grid-column: 2 / span 2;">
-                            <img src="../assets/img/antoine-beauvillain-zY_NaksFH1k-unsplash-removebg-preview.png" alt="photo space image">
-                            <h3 class="project-name">Photo Space</h3>
-                            <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                        <div class="project-showcase" style="background: #AF47D2;">
-                            <img src="../assets/portraits/DSC_0110-49-removebg-preview.png" alt="lakat image">
-                            <h3 class="project-name">Lakat</h3>
-                            <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                        <div class="project-showcase" style="background: #B8621B;">
-                            <img src="../assets/img/pexels-lum3n-44775-406014-removebg-preview.png" alt="marketo image">
-                            <h3 class="project-name">Marketo</h3>
-                            <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                        <div class="project-showcase" style="background: #686D76;">
-                            <img src="../assets/portraits/DSC_0097-45-removebg-preview.png" alt="placeholder image">
-                            <h3 class="project-name">&#60;placeholder&#62;</h3>
-                            <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                </div>
+                <%- include('projects.ejs'); %>
             </div>
-            <!-- <a href="#experience" class="arrow">
-                <i class="fa fa-angle-double-up"></i>
-                <p>Look What I Did</p>
-            </a> -->
         </section>
         <section id="footer">
-            <div class="socials">
-                <a href="https://github.com/gaverealjohn/" target="_blank">
-                    <i class="fa fa-github-alt" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/gabriel-john-manzanares-8a4a401a4" target="_blank">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="https://instagram.com/gbrlig/" target="_blank">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-            </div>
+            <%- include('partials/footer.ejs'); %>
         </section>
         <a href="#hero" id="arrow-back-up" class="arrow">
             <i class="fa fa-angle-double-up"></i>
