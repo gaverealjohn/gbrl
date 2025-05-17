@@ -1,7 +1,7 @@
 <div class="projects-grid">
-    <% items.forEach((project) => { %>
+    <% items.projects.forEach((project) => { %>
         <div class="project-showcase" id="<%= project._id %>" style="background: var(--secondary-accent);">
-            <img src="data:image/<%= project.img.contentType %>;base64, <%= project.img.data.toString('base64') %>" alt="<%= items[0].description %>" alt="<%= project.name %> image" />
+            <img src="data:image/<%= project.img.contentType %>;base64, <%= project.img.data.toString('base64') %>" alt="<%= project.description %>" alt="<%= project.name %> image" />
             <h3 class="project-name"><%= project.name %></h3>
             <p class="project-desc"><%= project.description %></p>
         </div>
