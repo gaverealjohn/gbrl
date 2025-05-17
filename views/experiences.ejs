@@ -23,7 +23,8 @@
                 <span class="duration-total">(<%= experience.len %>)</span>
             </p>
             <ul class="work-desc-list">
-                <% experience.positions.forEach((pos) => { %>
+                <% let sortedPositions = experience.positions.sort((a, b) => (a.position_number > b.position_number) ? -1 : ((b.position_number > a.position_number) ? 1 : 0)); %>
+                <% sortedPositions.forEach((pos) => { %>
                     <li class="work-desc">
                         <p class="desc-title"><%= pos.position %></p>
                         <p class="desc-duration">
@@ -31,13 +32,16 @@
                             <span class="desc-duration-end"><%= moment(pos.pos_end).format('MMM YYYY') %></span>
                             <span class="desc-duration-total">(<%= pos.pos_len %>)</span>
                         </p>
-                        <ul class="work-desc-summ">
-                            <% pos.position_desc.forEach((desc) => { %>
-                                <li class="work-desc-summ-task">
-                                    <%= desc %>
-                                </li>
-                            <% }) %>
-                        </ul>
+                        <% console.log(pos.position_desc.length) %>
+                        <% if (pos.position_desc.length > 0) { %>
+                            <ul class="work-desc-summ">
+                                <% pos.position_desc.forEach((desc) => { %>
+                                    <li class="work-desc-summ-task">
+                                        <%= desc %>
+                                    </li>
+                                <% }) %>
+                            </ul>
+                        <% } %>
                     </li>
                 <% }) %>
             </ul>

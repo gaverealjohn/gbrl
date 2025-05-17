@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const positionSchema = new mongoose.Schema({
+    position_number: {
+        required: true,
+        type: Number
+    },
     position: {
         required: true,
         type: String

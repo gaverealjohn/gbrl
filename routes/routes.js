@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
     try {
         const projects = await Project.find();
         const experiences = await Experience.find().sort({ job_number: -1 });
-        // res.json(data);
+        // res.json(data);        
         res.render('main', { moment: moment, items: { projects: projects, experiences: experiences }});
     }
     catch(error) {
