@@ -32,7 +32,6 @@
                             <span class="desc-duration-end"><%= moment(pos.pos_end).format('MMM YYYY') %></span>
                             <span class="desc-duration-total">(<%= pos.pos_len %>)</span>
                         </p>
-                        <% console.log(pos.position_desc.length) %>
                         <% if (pos.position_desc.length > 0) { %>
                             <ul class="work-desc-summ">
                                 <% pos.position_desc.forEach((desc) => { %>
